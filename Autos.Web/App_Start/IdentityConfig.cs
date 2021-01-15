@@ -87,7 +87,7 @@ namespace Autos.Web
             return manager;
         }
     }
-
+     
     // Configure el administrador de inicios de sesión que se usa en esta aplicación.
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
