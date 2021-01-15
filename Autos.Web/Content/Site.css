@@ -1,0 +1,132 @@
+﻿body {
+    background-color: #161616;
+    color: white;
+}
+
+h1, h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Georgia;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+
+.botones{
+    margin-top: 1rem;
+    font-size:1.5rem;
+}
+
+address, form, p {
+    font-family: 'Times New Roman';
+}
+
+p, h1, h2 {
+    text-align: center;
+}
+
+.Imgs {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+    .Imgs img {
+        height: 15rem;
+    }
+
+.boton {
+    background-color: #1876F2;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+form p{
+    font-size: 1.1rem;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.mapa, .botones, .rb {
+    display: flex;
+}
+.mapa, .botones {
+    flex-direction: column;
+}
+.mapa iframe, .Imgs img, .Imgs, .botones {
+     width: 100%;
+}
+.rb{
+    flex-direction: row;
+    justify-content:center;
+}
+.rb h4{
+    margin-right: 1rem;
+}
+.rb input{
+    margin-right: 2rem;
+}
+table tr th, td {
+    color: white;
+
+}
+
+@media (max-width: 1000px) {
+    .TituloImagenes {
+        font-size: 3rem;
+    }
+
+    .SubTituloImagenes {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 770px) {
+    p {
+        text-align: justify;
+    }
+
+    .TituloImagenes {
+        font-size: 2.5rem;
+    }
+
+    .SubTituloImagenes {
+        font-size: 3.5rem;
+    }
+
+    .Imgs img {
+        height: 12rem;
+    }
+}
+
+@media (max-width: 600px) {
+    p, .mapa, address {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .TituloImagenes {
+        font-size: 2.5rem;
+    }
+
+    .SubTituloImagenes {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .TituloImagenes {
+        font-size: 1.5rem;
+    }
+
+    .SubTituloImagenes {
+        font-size: 2.5rem;
+    }
+
+    .Imgs img {
+        height: 8rem;
+    }
+}

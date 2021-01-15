@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Autos.Web.Models.Carro>
+
+@{
+    ViewBag.Title = "Index";
+}   
+
+<h2>Pagina de Articulos</h2>
+
+<p class="m-3">
+    @if (User.IsInRole("Administrador"))
+
+    {
+        <a href="@Url.Action("Create", "Carroes")" class="btn btn-sm bg-secondary text-white"> <i class="fas fa-plus"></i> Crear </a>
+
+    }
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Año)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Combustible) 
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th> 
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Año)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Combustible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "Carroes", new { id=item.Id })" class="btn btn-sm bg-secondary text-white"> <i class="fas fa-edit"></i> Editar </a> |
+            <a href="@Url.Action("Details", "Carroes", new { id=item.Id })" class="btn btn-sm bg-secondary text-white"> <i class="fas fa-info"></i> Detalles </a> |
+            <a href="@Url.Action("Delete", "Carroes", new { id=item.Id })" class="btn btn-sm bg-secondary text-white"> <i class="fas fa-trash-alt"></i> Borrar </a> 
+            
+        </td>
+    </tr>
+}
+
+</table>
